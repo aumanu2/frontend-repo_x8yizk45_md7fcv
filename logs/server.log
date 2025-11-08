@@ -1,0 +1,10 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 226 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.14.103:3000/
+10:12:29 AM [vite] Pre-transform error: Failed to resolve import "@studio-freight/lenis" from "src/App.jsx". Does the file exist?
