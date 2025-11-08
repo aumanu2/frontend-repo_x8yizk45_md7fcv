@@ -1,35 +1,11 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import { WhatWeDo, About, Founders, Projects, Contact } from './components/Sections';
-import Lenis from '@studio-freight/lenis';
-import { useEffect } from 'react';
-
-function useLenis() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      smoothWheel: true,
-      lerp: 0.12,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    const id = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(id);
-      lenis.destroy();
-    };
-  }, []);
-}
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import { WhatWeDo, About, Founders, Projects, Contact } from "./components/Sections";
+import Footer from "./components/Footer";
 
 export default function App() {
-  useLenis();
-
   return (
-    <div className="min-h-screen bg-black text-white font-inter">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
       <WhatWeDo />
